@@ -24,6 +24,7 @@ const Header = ({ onToggle }: HeaderProps): JSX.Element => {
   const { toggleColorMode, colorMode } = useColorMode();
   return (
     <Box
+      zIndex={1001}
       w={'full'}
       h={'10vh'}
       px={10}
@@ -31,6 +32,8 @@ const Header = ({ onToggle }: HeaderProps): JSX.Element => {
       top={0}
       left={0}
       right={0}
+      bg={useColorModeValue('gray.50', 'gray.900')}
+      color={useColorModeValue('gray.700', 'gray.200')}
       borderBottom={'1px'}
       borderBottomColor={useColorModeValue('gray.200', 'gray.900')}
     >

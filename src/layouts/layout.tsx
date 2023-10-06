@@ -1,8 +1,9 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
 import { LayoutProps } from './layout.props';
 import Header from './header/header';
 import { FunctionComponent, useState } from 'react';
 import Sidebar from './sidebar/sidebar';
+import Footer from './footer/footer';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -16,10 +17,12 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Box
         mt={'11vh'}
         pl={{ base: 0, lg: '320px' }}
+        minH={'90vh'}
         transition={'all .5s ease'}
       >
-        {children}
+        <Container maxW={'container.lg'}>{children}</Container>
       </Box>
+      <Footer />
     </Box>
   );
 };
