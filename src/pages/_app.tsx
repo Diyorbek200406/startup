@@ -1,14 +1,12 @@
-import '@/styles/globals.css';
-import '@fontsource/roboto';
-import 'react-multi-carousel/lib/styles.css';
-
-import { ChakraBaseProvider } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
-import { theme } from '@/config/theme';
-import { I18nextProvider } from 'react-i18next';
-import i18n from '@/i18n';
-import { Client, HydrationProvider } from 'react-hydration-provider';
-
+import "@/styles/globals.css";
+import "@fontsource/roboto";
+import "react-multi-carousel/lib/styles.css";
+import type { AppProps } from "next/app";
+import { HydrationProvider, Client } from "react-hydration-provider";
+import { I18nextProvider } from "react-i18next";
+import i18n from "@/i18n";
+import { ChakraBaseProvider } from "@chakra-ui/react";
+import { theme } from "@/config/theme";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <HydrationProvider>

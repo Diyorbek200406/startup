@@ -1,14 +1,5 @@
-import {
-  Categories,
-  Hero,
-  HowItWorks,
-  Instructors,
-  NewsLetter,
-  PopularCourses,
-  Sponsor,
-  Testimonials,
-} from '@/components';
-import { Stack } from '@chakra-ui/react';
+import { Categories, Hero, HowItWorks, Instructors, NewsLetter, PopularCourses, Sponsor, Testimonials } from "@/components";
+import { Stack } from "@chakra-ui/react";
 
 const HomePageComponent = () => {
   return (
