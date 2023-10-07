@@ -119,9 +119,9 @@ const data: CourseType[] = [
     reviewAvarage: 4.5,
     reviewCount: 200,
     author: {
-      firstName: 'Samar',
-      lastName: 'Badriddinov',
-      avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+      firstName: 'Diyorbek',
+      lastName: 'Erkinov',
+      avatar: 'https://picsum.photos/200',
     },
   },
   {
@@ -134,9 +134,9 @@ const data: CourseType[] = [
     reviewAvarage: 4.5,
     reviewCount: 250,
     author: {
-      firstName: 'Samar',
-      lastName: 'Badriddinov',
-      avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+      firstName: 'Diyorbek',
+      lastName: 'Erkinov',
+      avatar: 'https://picsum.photos/200',
     },
   },
   {
@@ -149,9 +149,9 @@ const data: CourseType[] = [
     reviewAvarage: 4.5,
     reviewCount: 150,
     author: {
-      firstName: 'Samar',
-      lastName: 'Badriddinov',
-      avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+      firstName: 'Diyorbek',
+      lastName: 'Erkinov',
+      avatar: 'https://picsum.photos/200',
     },
   },
   {
@@ -164,9 +164,9 @@ const data: CourseType[] = [
     reviewAvarage: 5,
     reviewCount: 250,
     author: {
-      firstName: 'Samar',
-      lastName: 'Badriddinov',
-      avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+      firstName: 'Diyorbek',
+      lastName: 'Erkinov',
+      avatar: 'https://picsum.photos/200',
     },
   },
   {
@@ -179,9 +179,9 @@ const data: CourseType[] = [
     reviewAvarage: 4.9,
     reviewCount: 120,
     author: {
-      firstName: 'Samar',
-      lastName: 'Badriddinov',
-      avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+      firstName: 'Diyorbek',
+      lastName: 'Erkinov',
+      avatar: 'https://picsum.photos/200',
     },
   },
   {
@@ -194,9 +194,9 @@ const data: CourseType[] = [
     reviewAvarage: 5,
     reviewCount: 250,
     author: {
-      firstName: 'Samar',
-      lastName: 'Badriddinov',
-      avatar: 'https://media.graphassets.com/NfxHACAlR4CkvdhnB3gs',
+      firstName: 'Diyorbek',
+      lastName: 'Erkinov',
+      avatar: 'https://picsum.photos/200',
     },
   },
 ];
