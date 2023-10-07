@@ -8,11 +8,13 @@ import {
 import React from 'react';
 import { format } from 'date-fns';
 import { FaInstagram, FaTelegram, FaYoutube } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <Box
-      pl={{ base: 0, lg: '320px' }}
+      pl={{ base: 4, lg: '320px' }}
       mt={10}
       w={'full'}
       borderTop={'1px'}
@@ -23,7 +25,8 @@ const Footer = () => {
     >
       <Flex justify={'space-between'} align={'center'} h={'full'}>
         <Text>
-          © {format(new Date(), 'yyyy')} Erkinov Diyorbek. All Right Reserved.
+          © {format(new Date(), 'yyyy')} Erkinov Diyorbek.{' '}
+          {t('footer', { ns: 'layout' })}
         </Text>
         <Flex gap={4} mr={10}>
           <IconButton

@@ -1,4 +1,4 @@
-import { DarkLogo, EngIcons, LightLogo, UzbIcons } from '@/icons';
+import { DarkLogo, LightLogo } from '@/icons';
 import {
   Box,
   Button,
@@ -14,14 +14,22 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import Link from 'next/link';
-import { BsFillMoonFill, BsFillSunFill, BsTranslate } from 'react-icons/bs';
+import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
 import { BiMenuAltLeft, BiUserCircle } from 'react-icons/bi';
 import { MdContactSupport } from 'react-icons/md';
-import RusIcon from '@/icons/rus';
 import { HeaderProps } from './header.props';
+import { language } from '@/config/constants';
+import { useTranslation } from 'react-i18next';
+import { TbWorld } from 'react-icons/tb';
 
 const Header = ({ onToggle }: HeaderProps): JSX.Element => {
   const { toggleColorMode, colorMode } = useColorMode();
+  const { t, i18n } = useTranslation();
+
+  const onLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <Box
       zIndex={1001}
@@ -59,17 +67,30 @@ const Header = ({ onToggle }: HeaderProps): JSX.Element => {
             variant={'outline'}
           />
 
-          <Menu>
+          <Menu placement="bottom">
             <MenuButton
-              as={IconButton}
-              icon={<BsTranslate />}
+              as={Button}
+              rightIcon={<TbWorld />}
               colorScheme="facebook"
               variant={'solid'}
-            />
-            <MenuList>
-              <MenuItem icon={<UzbIcons />}>UZB</MenuItem>
-              <MenuItem icon={<EngIcons />}>ENG</MenuItem>
-              <MenuItem icon={<RusIcon />}>RUS</MenuItem>
+              textTransform={'capitalize'}
+            >
+              {i18n.resolvedLanguage}
+            </MenuButton>
+
+            <MenuList p={0}>
+              {language.map((e) => (
+                <MenuItem
+                  key={e.lng}
+                  onClick={() => onLanguage(e.lng)}
+                  icon={<e.icon />}
+                  backgroundColor={
+                    i18n.resolvedLanguage === e.lng ? 'facebook.500' : ''
+                  }
+                >
+                  {e.nativeLng}
+                </MenuItem>
+              ))}
             </MenuList>
           </Menu>
 
@@ -82,7 +103,7 @@ const Header = ({ onToggle }: HeaderProps): JSX.Element => {
           />
 
           <Button rightIcon={<BiUserCircle />} colorScheme="facebook">
-            Login
+            {t('login', { ns: 'layout' })}
           </Button>
         </HStack>
       </Flex>

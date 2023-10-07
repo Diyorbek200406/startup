@@ -1,8 +1,10 @@
 import { Box, Button, Card, CardBody, Input, Stack } from '@chakra-ui/react';
 import SectionTitle from '../section-title/section-title';
 import { color } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const NewsLetter = () => {
+  const { t } = useTranslation();
   return (
     <Card mt={10}>
       <CardBody
@@ -15,8 +17,8 @@ const NewsLetter = () => {
           <SectionTitle
             textAlign={'center'}
             maxW={'container.sm'}
-            title="Subscribe our Newsletter &"
-            subtitle="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, atque suscipit? Ducimus itaque vitae iste nemo maxime dicta repellendus! Et."
+            title={t('newsletter_title', { ns: 'home' })}
+            subtitle={t('newsletter_description', { ns: 'home' })}
           />
           <Box pos={'relative'}>
             <Input
@@ -24,7 +26,7 @@ const NewsLetter = () => {
               w={'full'}
               bg={'white'}
               color={'gray.900'}
-              placeholder="Your Email..."
+              placeholder={t('newsletter_placeholder', { ns: 'home' })}
               _placeholder={{ color: 'gray.500' }}
             />
             <Button
@@ -34,7 +36,7 @@ const NewsLetter = () => {
               top={2}
               colorScheme="facebook"
             >
-              Submit
+              {t('newsletter_submit', { ns: 'home' })}
             </Button>
           </Box>
         </Stack>

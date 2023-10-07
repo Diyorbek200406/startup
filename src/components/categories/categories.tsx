@@ -3,15 +3,17 @@ import SectionTitle from '../section-title/section-title';
 import { categoryCarousel } from '@/config/carusel';
 import { Box, Icon, Text, useColorModeValue } from '@chakra-ui/react';
 import { categories } from '@/config/constants';
+import { useTranslation } from 'react-i18next';
 
 const Categories = () => {
   const backgroundColor = useColorModeValue('gray.100', 'gray.900');
   const fill = useColorModeValue('#020288', 'gray.600');
+  const { t } = useTranslation();
   return (
     <>
       <SectionTitle
-        title="Top Categories"
-        subtitle="Learn our courses with high rating"
+        title={t('category_title', { ns: 'home' })}
+        subtitle={t('category_description', { ns: 'home' })}
       />
       <Carousel
         responsive={categoryCarousel}
@@ -34,7 +36,7 @@ const Categories = () => {
           >
             <Icon as={category.icon} w={20} h={20} fill={fill} />
             <Text mt={2} fontSize={'lg'}>
-              {category.name}
+              {t(category.name, { ns: 'home' })}
             </Text>
           </Box>
         ))}
