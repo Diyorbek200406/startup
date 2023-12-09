@@ -1,40 +1,28 @@
-import Carousel from 'react-multi-carousel';
-import SectionTitle from '../section-title/section-title';
-import { Box, Center, Icon, Text } from '@chakra-ui/react';
-import { testimonialsCarousel } from '@/config/carusel';
-import { ImQuotesRight } from 'react-icons/im';
-import { useTranslation } from 'react-i18next';
+import Carousel from "react-multi-carousel";
+import SectionTitle from "../section-title/section-title";
+import { Center, Icon, Text } from "@chakra-ui/react";
+import { testimonialsCarousel } from "@/config/carusel";
+import { ImQuotesRight } from "react-icons/im";
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
   const { t } = useTranslation();
   return (
     <>
       <SectionTitle
-        textAlign={'center'}
-        title={t('testimonials_title', { ns: 'home' })}
-        subtitle={t('testimonials_description', { ns: 'home' })}
+        textAlign={"center"}
+        title={t("testimonials_title", { ns: "home" })}
+        subtitle={t("testimonials_description", { ns: "home" })}
       />
 
-      <Carousel
-        responsive={testimonialsCarousel}
-        arrows={true}
-        showDots={false}
-        autoPlay={true}
-        autoPlaySpeed={10000}
-        infinite
-      >
+      <Carousel responsive={testimonialsCarousel} arrows={true} showDots={false} autoPlay={true} autoPlaySpeed={10000} infinite>
         {data.map((item, index) => (
-          <Center
-            key={index}
-            flexDirection={'column'}
-            maxW={'container.sm'}
-            mx={'auto'}
-          >
+          <Center key={index} flexDirection={"column"} maxW={"container.sm"} mx={"auto"}>
             <Icon as={ImQuotesRight} fontSize={100} />
-            <Text mt={5} textAlign={'center'}>
+            <Text mt={5} textAlign={"center"}>
               {item.description}
             </Text>
-            <Text fontSize={'xl'} fontWeight={'bold'} mt={3}>
+            <Text fontSize={"xl"} fontWeight={"bold"} mt={3}>
               {item.name}
             </Text>
           </Center>
@@ -48,23 +36,23 @@ export default Testimonials;
 
 const data = [
   {
-    name: 'Samar Badriddinov',
+    name: "Samar Badriddinov",
     description:
-      'It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.',
+      "It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.",
   },
   {
-    name: 'Yusuf Khamdamov',
+    name: "Yusuf Khamdamov",
     description:
-      'It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.',
+      "It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.",
   },
   {
-    name: 'Abdulloh Oripov',
+    name: "Abdulloh Oripov",
     description:
-      'It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.',
+      "It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.",
   },
   {
-    name: 'Shoxrux Yusupov',
+    name: "Shoxrux Yusupov",
     description:
-      'It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.',
+      "It is no exaggeration to say this Educrat experience was transformative–both professionally and personally. This workshop will long remain a high point of my life.",
   },
 ];
